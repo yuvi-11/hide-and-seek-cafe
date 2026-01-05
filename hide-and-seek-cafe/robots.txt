@@ -1,0 +1,15 @@
+# Hide & Seek Cafe - Robots.txt
+# https://hideandseekcafe.com
+
+# Allow all web crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://hideandseekcafe.com/sitemap.xml
+
+# Disallow admin or private areas (none currently)
+# Disallow: /admin/
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Seek Cafe | #03 MENU</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { charcoal: '#121212', cream: '#FDFBF7', sunset: '#FC8019' },
+                    fontFamily: { heading: ['Playfair Display', 'serif'], body: ['Outfit', 'sans-serif'] },
+                    borderRadius: { '4xl': '32px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #121212; color: #FDFBF7; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(18, 18, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(253, 251, 247, 0.05); }
+        .nav-link:hover { color: #FC8019; }
+        .nav-link.active .link-dot { background-color: #FC8019; width: 6px; height: 6px; }
+        .menu-item { border-bottom: 1px dashed rgba(253, 251, 247, 0.1); padding-bottom: 1rem; margin-bottom: 2rem; position: relative; }
+        .menu-item::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 0; height: 1px; background: #FC8019; transition: width 0.3s ease; }
+        .menu-item:hover::after { width: 100%; }
+    </style>
+</head>
+<body class="bg-charcoal text-cream">
+    <!-- Navigation (Condensed for brevity here, but same as others) -->
+    <nav class="fixed top-0 left-0 w-full z-[900] glass border-b border-cream/5">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between gap-8">
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="index.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#01</span>
+                        <span class="opacity-60 group-hover:opacity-100">HOME</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="about.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#02</span>
+                        <span class="opacity-60 group-hover:opacity-100">ABOUT</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="menu.html" class="nav-link active group flex flex-col items-center text-sunset">
+                        <span class="mb-1">#03</span>
+                        <span>MENU</span>
+                        <div class="link-dot w-1.5 h-1.5 bg-sunset rounded-full mt-1"></div>
+                    </a>
+                </div>
+                <a href="index.html" class="flex flex-col items-center group">
+                    <span class="font-heading text-2xl tracking-tighter">HIDE & SEEK</span>
+                    <span class="text-[8px] tracking-[0.4em] text-sunset uppercase -mt-1">Café & Sanctuary</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="gallery.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#04</span>
+                        <span class="opacity-60 group-hover:opacity-100">GALLERY</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="articles.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#05</span>
+                        <span class="opacity-60 group-hover:opacity-100">ARTICLES</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="contact.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#06</span>
+                        <span class="opacity-60 group-hover:opacity-100">CONTACT</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-60 pb-20 text-center px-6">
+        <h1 class="font-heading text-7xl mb-4">The Script.</h1>
+        <p class="text-sunset uppercase tracking-[0.4em] text-xs font-bold">Curated Flavors</p>
+    </header>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-20">
+                <h2 class="font-heading text-4xl mb-12 text-sunset">Signature Kulhads</h2>
+                <div class="menu-item group">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="text-2xl font-bold">The Origin Pizza</h3>
+                        <span class="text-sunset font-bold">₹249</span>
+                    </div>
+                    <p class="text-cream/50 text-sm">Classic mozzarella, fresh basil, and our secret heritage spice blend in a terracotta pot.</p>
+                </div>
+                <div class="menu-item group">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="text-2xl font-bold">Midnight Tikka</h3>
+                        <span class="text-sunset font-bold">₹289</span>
+                    </div>
+                    <p class="text-cream/50 text-sm">Smoky paneer, charred onions, and a zing of lemon cream.</p>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="font-heading text-4xl mb-12 text-sunset">Artisan Brews</h2>
+                <div class="menu-item group">
+                    <div class="flex justify-between items-end mb-2">
+                        <h3 class="text-2xl font-bold">The Noir Latte</h3>
+                        <span class="text-sunset font-bold">₹189</span>
+                    </div>
+                    <p class="text-cream/50 text-sm">Dark roasted beans with a hint of charcoal and vanilla bean.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-cream/5">
+        <p class="text-[10px] opacity-30">&copy; 2025 Hide & Seek Cafe.</p>
+    </footer>
+</body>
+</html>

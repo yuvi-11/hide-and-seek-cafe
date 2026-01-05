@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Seek Cafe | #02 ABOUT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { charcoal: '#121212', cream: '#FDFBF7', sunset: '#FC8019' },
+                    fontFamily: { heading: ['Playfair Display', 'serif'], body: ['Outfit', 'sans-serif'] },
+                    borderRadius: { '4xl': '32px' }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body { background-color: #121212; color: #FDFBF7; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+        .brick-overlay { background-image: url('https://www.transparenttextures.com/patterns/brick-wall.png'); opacity: 0.03; pointer-events: none; }
+        .glass { background: rgba(18, 18, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(253, 251, 247, 0.05); }
+        .nav-link:hover { color: #FC8019; }
+        .nav-link.active .link-dot { background-color: #FC8019; width: 6px; height: 6px; }
+    </style>
+</head>
+<body class="bg-charcoal text-cream">
+    <div class="fixed inset-0 brick-overlay z-[100]"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-[900] glass border-b border-cream/5">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between gap-8">
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="index.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#01</span>
+                        <span class="opacity-60 group-hover:opacity-100">HOME</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="about.html" class="nav-link active group flex flex-col items-center text-sunset">
+                        <span class="mb-1">#02</span>
+                        <span>ABOUT</span>
+                        <div class="link-dot w-1.5 h-1.5 bg-sunset rounded-full mt-1"></div>
+                    </a>
+                    <a href="menu.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#03</span>
+                        <span class="opacity-60 group-hover:opacity-100">MENU</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                </div>
+                <a href="index.html" class="flex flex-col items-center group">
+                    <span class="font-heading text-2xl tracking-tighter">HIDE & SEEK</span>
+                    <span class="text-[8px] tracking-[0.4em] text-sunset uppercase -mt-1">Café & Sanctuary</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="gallery.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#04</span>
+                        <span class="opacity-60 group-hover:opacity-100">GALLERY</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="articles.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#05</span>
+                        <span class="opacity-60 group-hover:opacity-100">ARTICLES</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="contact.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#06</span>
+                        <span class="opacity-60 group-hover:opacity-100">CONTACT</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-60 pb-32 text-center px-6">
+        <h1 class="font-heading text-6xl md:text-8xl mb-8">The Story So Far.</h1>
+        <p class="max-w-2xl mx-auto text-xl text-cream/70 font-light leading-relaxed">
+            In the heart of Vadodara, we didn't just build a cafe. We created a chapter in the lives of those who seek more than just sustenance.
+        </p>
+    </header>
+
+    <section class="py-32 section-fade">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+                <img src="https://images.unsplash.com/photo-1559925393-8be0ec41b595?q=80&w=2071&auto=format&fit=crop" class="rounded-4xl shadow-2xl" alt="About Image">
+                <div class="space-y-8">
+                    <h2 class="font-heading text-4xl md:text-6xl">Our Philosophy</h2>
+                    <p class="text-lg text-cream/70 leading-relaxed">
+                        We believe that every guest is a character with a unique plot line. Our role is to provide the perfect setting—a cinematic backdrop where your story unfolds, one sip at a time.
+                    </p>
+                    <p class="text-lg text-cream/70 leading-relaxed">
+                        From the choice of music to the warmth of our terracotta kulhads, every detail is intentional. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer same as index.html -->
+    <footer class="bg-charcoal pt-32 pb-20 border-t border-cream/5">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-[10px] font-bold tracking-[0.2em] text-cream/30 uppercase">&copy; 2025 Hide & Seek Cafe. Crafted with Soul.</p>
+        </div>
+    </footer>
+
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        gsap.from(".section-fade", { opacity: 0, y: 50, duration: 1.2, scrollTrigger: { trigger: ".section-fade", start: "top 80%" } });
+    </script>
+</body>
+</html>

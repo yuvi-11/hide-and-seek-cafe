@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#050505">
+    <meta name="color-scheme" content="dark">
+    
+    <title>Hide & Seek Cafe | Best Cafe in Manjalpur, Vadodara</title>
+    <meta name="description" content="Visit Hide & Seek Cafe in Manjalpur, Vadodara. 100% Vegetarian, Open Kitchen, and Budget Friendly. The best spot for Hazelnut Frappe and Woodfired Pizza.">
+    <meta name="keywords" content="Hide and Seek Cafe, Cafe in Vadodara, Best Cafe in Manjalpur, Kulhad Chai, Woodfired Pizza, Fast Food Vadodara, Coffee Shop Manjalpur, Lileria Paramount Cafe, best pizza vadodara, cold coffee manjalpur">
+    <meta name="author" content="Hide & Seek Cafe">
+    <meta name="robots" content="index, follow">
+    <meta name="geo.region" content="IN-GJ">
+    <meta name="geo.placename" content="Vadodara">
+    <link rel="canonical" href="https://hideandseekcafe.com">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:site_name" content="Hide & Seek Cafe">
+    <meta property="og:title" content="Hide & Seek Cafe | Flavor Meets Vibe">
+    <meta property="og:description" content="Discover Manjalpur's premier cafe. Serving premium Coffee, Burgers, and Pizza. Visit us at Lileria Paramount.">
+    <meta property="og:image" content="https://hideandseekcafe.com/assets/og-image.jpg">
+    <meta property="og:url" content="https://hideandseekcafe.com">
+    <meta property="og:locale" content="en_IN">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Hide & Seek Cafe | Best Cafe in Manjalpur">
+    <meta name="twitter:description" content="100% Vegetarian cafe with Open Kitchen. Premium Coffee, Pizza, Burgers & more!">
+    <meta name="twitter:image" content="https://hideandseekcafe.com/assets/og-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CafeOrCoffeeShop",
+      "name": "Hide & Seek Cafe",
+      "image": "https://hideandseekcafe.com/assets/logo.png",
+      "url": "https://hideandseekcafe.com",
+      "telephone": "+917859871416",
+      "priceRange": "₹",
+      "servesCuisine": ["Fast Food", "Coffee", "Beverages", "Pizza", "Burgers"],
+      "acceptsReservations": "No",
+      "hasMenu": "https://hideandseekcafe.com/menu.html",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Shop No. 22, Ground Floor, Lileria Paramount",
+        "addressLocality": "Manjalpur",
+        "addressRegion": "Gujarat",
+        "postalCode": "390011",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.2687,
+        "longitude": 73.1937
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "11:00",
+        "closes": "23:00"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.5",
+        "reviewCount": "150"
+      }
+    }
+    </script>
+
+    <!-- Performance: Preconnect to external resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://images.unsplash.com">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/logo.png">
+    <link rel="apple-touch-icon" href="./assets/logo.png">
+</head>
+<body class="bg-[#050505] text-[#f3f4f6] overflow-x-hidden">
+    <!-- Skip Link for Accessibility -->
+    <a href="#home" class="skip-link">Skip to main content</a>
+
+    <!-- Simple Preloader -->
+    <div id="preloader" class="fixed inset-0 bg-[#050505] z-[9999] flex items-center justify-center">
+        <div class="text-center">
+            <!-- Logo with pulse -->
+            <div class="relative mb-6">
+                <div class="w-24 h-24 mx-auto rounded-full border-2 border-[#d4a373] overflow-hidden animate-pulse flex-shrink-0">
+                    <img src="./assets/logo.png" alt="Hide & Seek Logo" class="w-full h-full object-cover">
+                </div>
+            </div>
+            
+            <!-- Cafe Name -->
+            <h2 class="font-playfair text-2xl font-bold text-white mb-4 min-h-[32px] flex items-center justify-center">
+                Hide <span class="text-[#d4a373] mx-1">&</span> Seek
+            </h2>
+            
+            <!-- Simple Loading Bar -->
+            <div class="w-48 h-1 bg-white/10 rounded-full overflow-hidden mx-auto mb-2">
+                <div id="loading-bar" class="h-full bg-[#d4a373] w-0 transition-all duration-100"></div>
+            </div>
+            <p id="loading-percent" class="text-gray-500 text-xs min-h-[16px]">Loading...</p>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/qr/5LZVIRMVSYMWC1" target="_blank" rel="noopener noreferrer" aria-label="Order on WhatsApp" class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 animate-bounce" style="animation-duration: 2s;">
+        <i class="ri-whatsapp-line text-3xl text-white"></i>
+    </a>
+
+    <!-- Live Status Badge -->
+    <div id="status-badge" class="fixed top-20 right-4 z-40 glass-card px-4 py-2 rounded-full border border-white/10 shadow-lg">
+        <span class="flex items-center gap-2">
+            <span id="status-dot" class="w-2.5 h-2.5 rounded-full"></span>
+            <span id="status-text" class="text-sm font-medium"></span>
+        </span>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 left-6 z-50 w-12 h-12 bg-[#d4a373] rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-white hover:text-[#d4a373] text-black">
+        <i class="ri-arrow-up-line text-xl"></i>
+    </button>
+
+    <nav id="navbar" class="fixed w-full z-40 top-0 left-0 border-b border-white/5 bg-[#050505]/80 backdrop-blur-md transition-all duration-300" role="navigation" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center transition-all duration-300">
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="./assets/logo.png" alt="Hide & Seek Logo" class="nav-logo h-12 w-12 rounded-full border border-[#d4a373] object-cover group-hover:rotate-12 transition-all duration-300">
+                <span class="font-playfair font-bold text-xl md:text-2xl tracking-wide text-white">Hide <span class="text-[#d4a373]">&</span> Seek</span>
+            </a>
+            
+            <div class="hidden md:flex gap-8 text-sm font-medium tracking-widest uppercase text-gray-400">
+                <a href="#home" class="nav-link active hover:text-[#d4a373] transition-all duration-300 relative py-1">Home</a>
+                <a href="#about" class="nav-link hover:text-[#d4a373] transition-all duration-300 relative py-1">About</a>
+                <a href="#menu" class="nav-link hover:text-[#d4a373] transition-all duration-300 relative py-1">Menu</a>
+                <a href="#gallery" class="nav-link hover:text-[#d4a373] transition-all duration-300 relative py-1">Gallery</a>
+                <a href="#location" class="nav-link hover:text-[#d4a373] transition-all duration-300 relative py-1">Location</a>
+            </div>
+
+            <button id="open-menu" class="md:hidden text-2xl text-[#d4a373] hover:scale-110 transition-transform"><i class="ri-menu-4-line"></i></button>
+        </div>
+    </nav>
+
+    <!-- Enhanced Mobile Menu -->
+    <div id="mobile-menu" class="fixed inset-0 bg-[#050505]/98 backdrop-blur-lg z-50 transform translate-x-full transition-transform duration-500 ease-out">
+        <div class="absolute inset-0 flex flex-col">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b border-white/5">
+                <div class="flex items-center gap-3">
+                    <img src="./assets/logo.png" alt="Logo" class="h-10 w-10 rounded-full border border-[#d4a373]">
+                    <span class="font-playfair font-bold text-lg text-white">Hide <span class="text-[#d4a373]">&</span> Seek</span>
+                </div>
+                <button id="close-menu" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-[#d4a373] hover:bg-[#d4a373] hover:text-black transition-all">
+                    <i class="ri-close-line text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex-1 flex flex-col items-center justify-center gap-6">
+                <a href="#home" class="mobile-link text-3xl font-playfair text-white hover:text-[#d4a373] transition-all" style="--delay: 0.1s">Home</a>
+                <a href="#about" class="mobile-link text-3xl font-playfair text-white hover:text-[#d4a373] transition-all" style="--delay: 0.15s">About</a>
+                <a href="#menu" class="mobile-link text-3xl font-playfair text-white hover:text-[#d4a373] transition-all" style="--delay: 0.2s">Menu</a>
+                <a href="#gallery" class="mobile-link text-3xl font-playfair text-white hover:text-[#d4a373] transition-all" style="--delay: 0.25s">Gallery</a>
+                <a href="#location" class="mobile-link text-3xl font-playfair text-white hover:text-[#d4a373] transition-all" style="--delay: 0.3s">Location</a>
+            </div>
+
+            <!-- Footer with social icons -->
+            <div class="p-6 border-t border-white/5">
+                <p class="text-center text-gray-500 text-sm mb-4">Follow us</p>
+                <div class="flex items-center justify-center gap-4">
+                    <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-instagram-fill text-xl"></i>
+                    </a>
+                    <a href="https://wa.me/qr/5LZVIRMVSYMWC1" target="_blank" rel="noopener noreferrer" aria-label="Contact on WhatsApp" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-whatsapp-fill text-xl"></i>
+                    </a>
+                    <a href="tel:+917859871416" aria-label="Call us" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-phone-fill text-xl"></i>
+                    </a>
+                    <a href="https://maps.google.com/?q=Hide+and+Seek+Cafe+Manjalpur+Vadodara" target="_blank" rel="noopener noreferrer" aria-label="Find us on Google Maps" class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-map-pin-fill text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <!-- Carousel Background Images -->
+        <div class="absolute inset-0 z-0">
+            <div class="carousel-slide active" style="background-image: url('./assets/ambience 02.jpg');">
+                <div class="carousel-caption">Our Vibe</div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('./assets/pizza 01.jpg');">
+                <div class="carousel-caption">Woodfired Pizza</div>
+            </div>
+            <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1511920170033-f8396924c348?q=80&w=2000&auto=format&fit=crop');">
+                <div class="carousel-caption">Coffee & Conversations</div>
+            </div>
+        </div>
+
+        <!-- Dark Gradient Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-[#050505] z-10"></div>
+
+        <!-- Glow Effect -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-[#d4a373] opacity-10 blur-[120px] rounded-full z-20"></div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-30 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-[#d4a373] uppercase tracking-[0.3em] text-xs mb-4 font-bold animate-fade-up">Manjalpur, Vadodara</p>
+            <h1 class="hero-text font-playfair text-5xl md:text-8xl font-bold leading-tight mb-6 bg-clip-text text-transparent bg-gradient-to-b from-white to-gray-500">
+                Where Flavor Plays <br> Hide & Seek.
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl font-light mb-10 max-w-2xl mx-auto leading-relaxed">
+                Manjalpur's favorite spot for <span id="rotating-text" class="text-[#d4a373] font-semibold">Coffee</span>, conversations, and cravings. <br>
+                <span class="text-[#d4a373]">Open kitchen. Pure vibes. 100% satisfaction.</span>
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#menu" class="inline-block px-8 py-4 border border-[#d4a373] text-[#d4a373] hover:bg-[#d4a373] hover:text-black transition-all duration-300 rounded-full font-medium tracking-wider uppercase text-sm">
+                    Explore Menu
+                </a>
+                <a href="https://wa.me/qr/5LZVIRMVSYMWC1" target="_blank" rel="noopener noreferrer" class="shiny-button auto-shimmer inline-block px-8 py-4 text-black transition-all duration-300 rounded-full font-medium tracking-wider uppercase text-sm flex items-center gap-2">
+                    <i class="ri-shopping-bag-line"></i> Order Now
+                </a>
+            </div>
+        </div>
+
+        <!-- Carousel Indicators -->
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-30 flex gap-3">
+            <button class="carousel-indicator active" data-slide="0"></button>
+            <button class="carousel-indicator" data-slide="1"></button>
+            <button class="carousel-indicator" data-slide="2"></button>
+        </div>
+    </header>
+
+    <div class="bg-[#d4a373] text-black py-3 overflow-hidden whitespace-nowrap border-y border-[#d4a373]">
+        <div class="inline-block animate-marquee font-bold text-sm tracking-widest uppercase">
+            Coffee • Conversations • Vibes • Burgers • Pizza • Hide & Seek • Manjalpur • Premium • 
+            Coffee • Conversations • Vibes • Burgers • Pizza • Hide & Seek • Manjalpur • Premium •
+        </div>
+    </div>
+
+    <section id="about" class="py-20 px-6 max-w-7xl mx-auto relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-64 h-64 bg-[#d4a373] opacity-5 blur-[100px] rounded-full"></div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="font-playfair text-4xl font-bold text-[#d4a373]">More Than Just Coffee</h2>
+                <p class="text-gray-400 leading-relaxed text-lg font-light">
+                    Cozy up in our warm and inviting cafe, where the aroma of freshly brewed coffee and baked goods fills the air. 
+                    Our cafe offers a relaxing atmosphere, perfect for catching up with friends, working, or simply enjoying a quiet moment to yourself.
+                </p>
+                <p class="text-gray-400 leading-relaxed text-lg font-light">
+                    Indulge in our selection of specialty coffees, teas, and delicious treats, all made with love and care. 
+                    Whether you're looking for a quick pick-me-up or a leisurely afternoon, we are the perfect spot to unwind and recharge.
+                </p>
+                
+                <div class="flex flex-wrap gap-3 pt-4">
+                    <span class="px-4 py-2 border border-[#d4a373]/30 rounded-full text-xs uppercase tracking-widest text-[#d4a373] bg-[#d4a373]/5">
+                        <i class="ri-leaf-line mr-1"></i> 100% Vegetarian
+                    </span>
+                    <span class="px-4 py-2 border border-[#d4a373]/30 rounded-full text-xs uppercase tracking-widest text-[#d4a373] bg-[#d4a373]/5">
+                        <i class="ri-eye-line mr-1"></i> Open Kitchen
+                    </span>
+                    <span class="px-4 py-2 border border-[#d4a373]/30 rounded-full text-xs uppercase tracking-widest text-[#d4a373] bg-[#d4a373]/5">
+                        <i class="ri-wallet-3-line mr-1"></i> Budget Friendly
+                    </span>
+                    <span class="px-4 py-2 border border-[#d4a373]/30 rounded-full text-xs uppercase tracking-widest text-[#d4a373] bg-[#d4a373]/5">
+                        <i class="ri-car-line mr-1"></i> Free Parking
+                    </span>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="glass-card p-2 rounded-2xl transform rotate-2 hover:rotate-0 transition duration-500">
+                    <img src="./assets/about section.png" alt="Cozy Cafe Vibes" class="rounded-xl w-full object-cover h-[400px]" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Featured Menu Section -->
+    <section id="menu" class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4 text-[#d4a373]">Our Signature Items</h2>
+            <p class="text-gray-500 max-w-2xl mx-auto">Handpicked favorites that define the Hide & Seek experience</p>
+        </div>
+
+        <!-- Featured Items Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+
+            <!-- Item 1: Kulhad Chai -->
+            <div class="featured-item group glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="./assets/kulhad chai.png" alt="Kulhad Chai" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-[#d4a373] text-black text-xs font-bold px-3 py-1 rounded-full">⭐ Must Try</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-playfair text-xl font-bold text-white">Adrak Kulhad Chai</h3>
+                        <span class="text-[#d4a373] font-bold text-lg">₹25</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Authentic Indian masala tea served in a traditional clay cup.</p>
+                </div>
+            </div>
+
+            <!-- Item 2: Kitkat Shake -->
+            <div class="featured-item group glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="./assets/kitkat oreo shake.jpg" alt="Kitkat Shake" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-[#d4a373] text-black text-xs font-bold px-3 py-1 rounded-full">🔥 Popular</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-playfair text-xl font-bold text-white">Kitkat Shake</h3>
+                        <span class="text-[#d4a373] font-bold text-lg">₹129</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Thick chocolate shake loaded with chunky Kitkat pieces</p>
+                </div>
+            </div>
+
+            <!-- Item 3: Tandoori Paneer Pizza -->
+            <div class="featured-item group glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="./assets/pizza 01.jpg" alt="Chef Special Pizza" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-[#d4a373] text-black text-xs font-bold px-3 py-1 rounded-full">👨‍🍳 Chef Special</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-playfair text-xl font-bold text-white">Tandoori Paneer Pizza</h3>
+                        <span class="text-[#d4a373] font-bold text-lg">₹209</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">9" wood-fired pizza with tandoori paneer & mozzarella</p>
+                </div>
+            </div>
+
+            <!-- Item 4: Cheesy Garlic Bread -->
+            <div class="featured-item group glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="./assets/chessy garlic bread.png" alt="Cheesy Garlic Bread" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-[#d4a373] text-black text-xs font-bold px-3 py-1 rounded-full">🧀 Cheesy!</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-playfair text-xl font-bold text-white">Cheesy Garlic Bread</h3>
+                        <span class="text-[#d4a373] font-bold text-lg">₹149</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Crispy baguette slices topped with garlic butter and melted mozzarella.</p>
+                </div>
+            </div>
+
+            <!-- Item 5: Oreo Shake -->
+            <div class="featured-item group glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="./assets/straoberry shake.jpg" alt="Strawberry Shake" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-[#d4a373] text-black text-xs font-bold px-3 py-1 rounded-full">❤️ Fan Favorite</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-playfair text-xl font-bold text-white">Strawberry Shake</h3>
+                        <span class="text-[#d4a373] font-bold text-lg">₹89</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Fresh strawberry pulp blended with thick vanilla ice cream</p>
+                </div>
+            </div>
+
+            <!-- Item 6: Sizzling Brownie -->
+            <div class="featured-item group glass-card rounded-2xl overflow-hidden hover:-translate-y-2 transition-all duration-500">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="./assets/brownie 01.jpg" alt="Sizzling Brownie" 
+                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-[#d4a373] text-black text-xs font-bold px-3 py-1 rounded-full">🍫 Sweet Treat</span>
+                </div>
+                <div class="p-5">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-playfair text-xl font-bold text-white">Sizzling Brownie</h3>
+                        <span class="text-[#d4a373] font-bold text-lg">₹119</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Hot fudge brownie served sizzling with vanilla ice cream</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- View Full Menu Button -->
+        <div class="text-center">
+            <a href="menu.html" class="inline-flex items-center gap-3 px-8 py-4 bg-[#d4a373] text-black rounded-full font-bold text-lg hover:bg-white transition-all duration-300 group">
+                <span>View Full Menu</span>
+                <i class="ri-arrow-right-line group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            <p class="text-gray-600 text-sm mt-4">12 categories • 100+ items • Starting from ₹15</p>
+        </div>
+    </section>
+
+    <!-- Gallery Carousel Section -->
+    <section id="gallery" class="py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+                <div>
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-4 text-[#d4a373]">Our Gallery</h2>
+                    <p class="text-gray-500 max-w-lg">Experience the cozy ambience, delicious food, and premium coffee that makes Hide & Seek Cafe special.</p>
+                </div>
+                <div class="flex gap-3">
+                    <button id="gallery-prev" class="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white hover:bg-[#d4a373] hover:border-[#d4a373] hover:text-black transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed">
+                        <i class="ri-arrow-left-line text-xl"></i>
+                    </button>
+                    <button id="gallery-next" class="w-12 h-12 rounded-full border border-white/20 bg-white/5 flex items-center justify-center text-white hover:bg-[#d4a373] hover:border-[#d4a373] hover:text-black transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed">
+                        <i class="ri-arrow-right-line text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Container -->
+        <div id="gallery-carousel" class="flex gap-5 overflow-x-auto scroll-smooth pb-8 px-6 md:px-[max(1.5rem,calc(50vw-600px))] hide-scrollbar">
+            
+            <!-- Card 1 -->
+            <div class="gallery-card flex-shrink-0 w-[300px] lg:w-[360px] group">
+                <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" class="block relative h-[420px] rounded-2xl overflow-hidden">
+                    <img src="./assets/ambience 02.jpg" 
+                         alt="Cozy Ambience" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Cozy Cafe Vibes</h3>
+                        <p class="text-sm text-gray-300 line-clamp-2 mb-4">Warm lighting, comfortable seating, and the perfect atmosphere for relaxation or productive work sessions.</p>
+                        <span class="inline-flex items-center text-sm text-[#d4a373] group-hover:gap-2 transition-all">
+                            View More <i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="gallery-card flex-shrink-0 w-[300px] lg:w-[360px] group">
+                <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" class="block relative h-[420px] rounded-2xl overflow-hidden">
+                    <img src="./assets/ice tea.jpg" 
+                         alt="Ice Tea" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Refreshing Ice Tea</h3>
+                        <p class="text-sm text-gray-300 line-clamp-2 mb-4">Cool down with our zesty and refreshing ice teas. Perfect for a sunny afternoon.</p>
+                        <span class="inline-flex items-center text-sm text-[#d4a373] group-hover:gap-2 transition-all">
+                            View More <i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="gallery-card flex-shrink-0 w-[300px] lg:w-[360px] group">
+                <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" class="block relative h-[420px] rounded-2xl overflow-hidden">
+                    <img src="./assets/artisan pizza.png" 
+                         alt="Wood-Fired Pizza" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Artisan Pizzas</h3>
+                        <p class="text-sm text-gray-300 line-clamp-2 mb-4">Fresh ingredients, homemade dough, and generous toppings. Our pizzas are crafted to perfection.</p>
+                        <span class="inline-flex items-center text-sm text-[#d4a373] group-hover:gap-2 transition-all">
+                            View More <i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="gallery-card flex-shrink-0 w-[300px] lg:w-[360px] group">
+                <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" class="block relative h-[420px] rounded-2xl overflow-hidden">
+                    <img src="./assets/kitkat oreo shake.jpg" 
+                         alt="Fresh Shakes" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Creamy Shakes</h3>
+                        <p class="text-sm text-gray-300 line-clamp-2 mb-4">Thick, creamy, and absolutely delicious. Try our signature Kitkat and Oreo shakes!</p>
+                        <span class="inline-flex items-center text-sm text-[#d4a373] group-hover:gap-2 transition-all">
+                            View More <i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="gallery-card flex-shrink-0 w-[300px] lg:w-[360px] group">
+                <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" class="block relative h-[420px] rounded-2xl overflow-hidden">
+                    <img src="./assets/calzone.jpg" 
+                         alt="Gourmet Calzone" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Cheesy Calzone</h3>
+                        <p class="text-sm text-gray-300 line-clamp-2 mb-4">A pocket full of flavor! Stuffed with cheese, veggies, and special sauces.</p>
+                        <span class="inline-flex items-center text-sm text-[#d4a373] group-hover:gap-2 transition-all">
+                            View More <i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="gallery-card flex-shrink-0 w-[300px] lg:w-[360px] group">
+                <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" class="block relative h-[420px] rounded-2xl overflow-hidden">
+                    <img src="./assets/ambience 01.jpg" 
+                         alt="Perfect Seating" 
+                         class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                         loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute inset-x-0 bottom-0 p-6 text-white">
+                        <h3 class="text-xl font-bold mb-2">Perfect Seating</h3>
+                        <p class="text-sm text-gray-300 line-clamp-2 mb-4">Whether you're here alone, with friends, or family, we have the perfect spot for you.</p>
+                        <span class="inline-flex items-center text-sm text-[#d4a373] group-hover:gap-2 transition-all">
+                            View More <i class="ri-arrow-right-line ml-1 transition-transform group-hover:translate-x-1"></i>
+                        </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Dot Indicators -->
+        <div id="gallery-dots" class="flex justify-center gap-2 mt-6">
+            <button class="gallery-dot active" data-index="0"></button>
+            <button class="gallery-dot" data-index="1"></button>
+            <button class="gallery-dot" data-index="2"></button>
+            <button class="gallery-dot" data-index="3"></button>
+            <button class="gallery-dot" data-index="4"></button>
+            <button class="gallery-dot" data-index="5"></button>
+        </div>
+
+        <div class="text-center mt-10">
+            <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-8 py-4 border border-[#d4a373] text-[#d4a373] hover:bg-[#d4a373] hover:text-black transition-all duration-300 rounded-full font-medium tracking-wider uppercase text-sm">
+                <i class="ri-instagram-line text-xl"></i> Follow us for more
+            </a>
+        </div>
+    </section>
+
+    <!-- Scrolling Testimonials Section -->
+    <section class="py-24 bg-[#0a0a0a] border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block px-4 py-1 rounded-full text-xs font-semibold tracking-wide uppercase text-[#d4a373] bg-[#d4a373]/10 border border-[#d4a373]/30 mb-4">Testimonials</span>
+                <h2 class="font-playfair text-3xl md:text-5xl font-bold mb-4">Vadodara Loves Us</h2>
+                <div class="flex justify-center gap-1 text-[#d4a373] text-xl">
+                    <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                </div>
+                <p class="text-gray-500 mt-4">Real reviews from our Google Business Profile</p>
+            </div>
+
+            <!-- Scrolling Columns Container -->
+            <div class="testimonial-scroll-container flex justify-center gap-6 max-h-[600px] overflow-hidden">
+                
+                <!-- Column 1 (scrolls up) -->
+                <div class="testimonial-column scroll-up hidden md:block">
+                    <div class="testimonial-scroll">
+                        <!-- Testimonial Card 1 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"Hide & Seek Cafe is a lovely spot with a cozy ambiance... The staff were friendly and attentive, making it a great place to relax or work."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">V</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Vishnu Sagi</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 2 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"Amazing coffee and even better vibes! The cold brew here is a must-try. Perfect spot for catching up with friends."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">R</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Rahul Patel</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 3 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"Best cafe in Manjalpur! The open kitchen concept is great, you can see everything being prepared fresh. Love it!"</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">S</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Sneha Desai</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 (scrolls down - center, featured) -->
+                <div class="testimonial-column scroll-down">
+                    <div class="testimonial-scroll">
+                        <!-- Testimonial Card 4 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6 border-t-4 border-[#d4a373]">
+                            <p class="text-gray-300 italic mb-4">"Please visit this cafe. It was very budget friendly. And there are many options available. Personally I recommend Calzone. It was Very delicious."</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="text-xs border border-white/10 px-2 py-1 rounded text-gray-400">Calzone</span>
+                                <span class="text-xs border border-white/10 px-2 py-1 rounded text-gray-400">Budget Friendly</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">P</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Purvisha Jadav</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 5 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"All items are very tasty.. Superb and it's open kitchen and neat and clean and fresh food. So try it."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">D</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Dipali Shah</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 6 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"The ambiance is perfect for a date night. Loved the dim lighting and cozy seating. Pizza was absolutely delicious!"</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">K</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Kriti Sharma</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3 (scrolls up) -->
+                <div class="testimonial-column scroll-up hidden lg:block">
+                    <div class="testimonial-scroll">
+                        <!-- Testimonial Card 7 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"Kitkat shake is a must try! Been coming here for 6 months and never disappointed. Great for students too."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">A</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Aditya Mehta</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 8 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"Free parking is a big plus! Food came out fast and hot. Will definitely bring my family again."</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">M</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Meera Joshi</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial Card 9 -->
+                        <div class="testimonial-card glass-card p-6 rounded-2xl mb-6">
+                            <p class="text-gray-300 italic mb-4">"Fantastic service and even better food. The burger here is one of the best I've had in Vadodara!"</p>
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#d4a373] to-gray-800 flex items-center justify-center font-bold text-black">N</div>
+                                <div>
+                                    <h4 class="font-bold text-white text-sm">Nikhil Rao</h4>
+                                    <div class="flex text-[#d4a373] text-xs"><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Leave a Review Section -->
+    <section id="reviews" class="py-24 px-6 max-w-xl mx-auto">
+        <div class="text-center mb-12">
+            <span class="inline-block px-4 py-1 rounded-full text-xs font-semibold tracking-wide uppercase text-[#d4a373] bg-[#d4a373]/10 border border-[#d4a373]/30 mb-4">Share Your Experience</span>
+            <h2 class="font-playfair text-3xl md:text-4xl font-bold mb-4">Loved Your Visit?</h2>
+            <p class="text-gray-500">Share your thoughts and help us serve you better.</p>
+        </div>
+
+        <!-- Google Review CTA -->
+        <div class="glass-card p-10 rounded-3xl text-center border border-[#d4a373]/20 shadow-2xl relative overflow-hidden group">
+            <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#d4a373] to-transparent opacity-50"></div>
+            
+            <div class="mb-8 inline-flex items-center justify-center w-20 h-20 rounded-full bg-white/5 border border-[#d4a373]/30 text-[#d4a373]">
+                <i class="ri-google-fill text-4xl"></i>
+            </div>
+            
+            <h3 class="font-playfair text-2xl md:text-3xl font-bold text-white mb-4">Love our vibe?</h3>
+            <p class="text-gray-400 mb-8 max-w-sm mx-auto">Click below to share your experience on <span class="text-white font-semibold">Google Reviews</span> and help others find us!</p>
+            
+            <a href="https://maps.google.com/?q=Hide+and+Seek+Cafe+Manjalpur+Vadodara" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-10 py-5 bg-[#d4a373] text-black rounded-full font-bold text-lg hover:bg-white hover:scale-105 transition-all duration-300 shadow-xl shadow-[#d4a373]/10">
+                <i class="ri-edit-2-line"></i>
+                Review Us on Google
+            </a>
+            
+            <div class="mt-8 flex justify-center gap-1 text-[#d4a373]">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer id="location" class="bg-[#0a0a0a] border-t border-white/5">
+        <!-- Main Footer Content -->
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                
+                <!-- Column 1: Brand -->
+                <div class="lg:col-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <img src="./assets/logo.png" alt="Hide & Seek Cafe" class="w-12 h-12 rounded-xl object-cover">
+                        <div>
+                            <h3 class="font-playfair text-xl font-bold text-white">Hide & Seek</h3>
+                            <p class="text-xs text-[#d4a373]">Cafe</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Where flavor meets vibe. Your cozy corner for premium coffee, delicious food, and unforgettable moments.
+                    </p>
+                    <!-- Location Tag -->
+                    <a href="https://maps.google.com/?q=Hide+and+Seek+Cafe+Manjalpur+Vadodara" target="_blank" 
+                       id="location-tag" 
+                       class="location-tag group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 transition-all duration-500 hover:border-[#d4a373]/50 hover:bg-white/10">
+                        <div class="relative flex items-center justify-center">
+                            <span class="absolute inline-flex h-2 w-2 animate-ping rounded-full bg-emerald-500 opacity-75"></span>
+                            <span class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+                        </div>
+                        <div class="relative h-4 overflow-hidden">
+                            <span id="location-city" class="block text-xs font-medium text-white transition-all duration-500">Manjalpur, Vadodara</span>
+                            <span id="location-time" class="block text-xs font-medium text-[#d4a373] transition-all duration-500">Loading...</span>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6 text-sm uppercase tracking-wider">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-[#d4a373] transition-colors text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-[#d4a373]"></i> Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-[#d4a373] transition-colors text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-[#d4a373]"></i> About Us</a></li>
+                        <li><a href="#menu" class="text-gray-400 hover:text-[#d4a373] transition-colors text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-[#d4a373]"></i> Menu</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-[#d4a373] transition-colors text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-[#d4a373]"></i> Gallery</a></li>
+                        <li><a href="#location" class="text-gray-400 hover:text-[#d4a373] transition-colors text-sm flex items-center gap-2"><i class="ri-arrow-right-s-line text-[#d4a373]"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6 text-sm uppercase tracking-wider">Visit Us</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="ri-map-pin-2-fill text-[#d4a373] mt-1"></i>
+                            <div>
+                                <p class="text-gray-400 text-sm">Shop No. 22, Ground Floor</p>
+                                <p class="text-gray-400 text-sm">Lileria Paramount, Manjalpur</p>
+                                <p class="text-gray-400 text-sm">Vadodara, Gujarat</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-time-fill text-[#d4a373]"></i>
+                            <p class="text-gray-400 text-sm">Daily: 9:00 AM - 11:00 PM</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <i class="ri-phone-fill text-[#d4a373]"></i>
+                            <a href="tel:+917859871416" class="text-gray-400 hover:text-[#d4a373] transition-colors text-sm">+91 78598 71416</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 4: Order Online -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6 text-sm uppercase tracking-wider">Order Online</h4>
+                    <div class="space-y-3">
+                        <!-- Swiggy Button -->
+                        <a href="https://www.swiggy.com/menu/1079891?source=sharing" target="_blank" rel="noopener noreferrer" aria-label="Order on Swiggy" class="flex items-center gap-3 px-4 py-3 bg-[#fc8019]/10 border border-[#fc8019]/30 rounded-xl hover:bg-[#fc8019]/20 transition-all group">
+                            <div class="w-8 h-8 bg-[#fc8019] rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-xs">S</span>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium group-hover:text-[#fc8019] transition-colors">Order on Swiggy</p>
+                                <p class="text-gray-500 text-xs">Fast Delivery</p>
+                            </div>
+                        </a>
+                        <!-- Zomato Button -->
+                        <a href="https://zoma.to/r/21906744" target="_blank" rel="noopener noreferrer" aria-label="Order on Zomato" class="flex items-center gap-3 px-4 py-3 bg-[#e23744]/10 border border-[#e23744]/30 rounded-xl hover:bg-[#e23744]/20 transition-all group">
+                            <div class="w-8 h-8 bg-[#e23744] rounded-lg flex items-center justify-center">
+                                <span class="text-white font-bold text-xs">Z</span>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium group-hover:text-[#e23744] transition-colors">Order on Zomato</p>
+                                <p class="text-gray-500 text-xs">Best Deals</p>
+                            </div>
+                        </a>
+                        <!-- WhatsApp Direct -->
+                        <a href="https://wa.me/qr/5LZVIRMVSYMWC1" target="_blank" rel="noopener noreferrer" aria-label="Order via WhatsApp" class="flex items-center gap-3 px-4 py-3 bg-[#25d366]/10 border border-[#25d366]/30 rounded-xl hover:bg-[#25d366]/20 transition-all group">
+                            <div class="w-8 h-8 bg-[#25d366] rounded-lg flex items-center justify-center">
+                                <i class="ri-whatsapp-fill text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-white text-sm font-medium group-hover:text-[#25d366] transition-colors">WhatsApp Order</p>
+                                <p class="text-gray-500 text-xs">Direct Chat</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Bar + Copyright -->
+        <div class="border-t border-white/5">
+            <div class="max-w-6xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <!-- Social Icons -->
+                <div class="flex items-center gap-4">
+                    <a href="tel:+917859871416" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-phone-fill"></i>
+                    </a>
+                    <a href="https://www.instagram.com/hide_and_seek_vadodara?igsh=d2hxMzM0Y3Q1a3hi" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-instagram-fill"></i>
+                    </a>
+                    <a href="https://wa.me/qr/5LZVIRMVSYMWC1" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-whatsapp-fill"></i>
+                    </a>
+                    <a href="https://maps.google.com/?q=Hide+and+Seek+Cafe+Manjalpur+Vadodara" target="_blank" class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-gray-400 hover:text-[#d4a373] hover:border-[#d4a373] transition-all">
+                        <i class="ri-map-pin-fill"></i>
+                    </a>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center md:text-right">
+                    <p class="text-gray-600 text-xs">© 2023 Hide & Seek Cafe. All rights reserved.</p>
+                    <p class="text-gray-700 text-xs mt-1">Crafted with <span class="text-[#d4a373]">♥</span> by <a href="#" class="text-gray-500 hover:text-[#d4a373] transition-colors">Yuvraj Solanki</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

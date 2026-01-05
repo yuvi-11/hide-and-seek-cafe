@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Seek Cafe | #04 GALLERY</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { charcoal: '#121212', cream: '#FDFBF7', sunset: '#FC8019' },
+                    fontFamily: { heading: ['Playfair Display', 'serif'], body: ['Outfit', 'sans-serif'] },
+                    borderRadius: { '4xl': '32px' }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #121212; color: #FDFBF7; font-family: 'Outfit', sans-serif; overflow-x: hidden; }
+        .glass { background: rgba(18, 18, 18, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(253, 251, 247, 0.05); }
+        .gallery-card { position: relative; overflow: hidden; border-radius: 32px; aspect-ratio: 1; }
+        .gallery-card img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .gallery-card:hover img { transform: scale(1.1); }
+        .hanging-greenery { pointer-events: none; opacity: 0.6; }
+    </style>
+</head>
+<body class="bg-charcoal text-cream">
+    <!-- Navigation (Simplified for brevity) -->
+    <nav class="fixed top-0 left-0 w-full z-[900] glass border-b border-cream/5">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between gap-8">
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="index.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#01</span>
+                        <span class="opacity-60 group-hover:opacity-100">HOME</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="about.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#02</span>
+                        <span class="opacity-60 group-hover:opacity-100">ABOUT</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="menu.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#03</span>
+                        <span class="opacity-60 group-hover:opacity-100">MENU</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                </div>
+                <a href="index.html" class="flex flex-col items-center group">
+                    <span class="font-heading text-2xl tracking-tighter">HIDE & SEEK</span>
+                    <span class="text-[8px] tracking-[0.4em] text-sunset uppercase -mt-1">Café & Sanctuary</span>
+                </a>
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="gallery.html" class="nav-link active group flex flex-col items-center text-sunset">
+                        <span class="mb-1">#04</span>
+                        <span>GALLERY</span>
+                        <div class="link-dot w-1.5 h-1.5 bg-sunset rounded-full mt-1"></div>
+                    </a>
+                    <a href="articles.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#05</span>
+                        <span class="opacity-60 group-hover:opacity-100">ARTICLES</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="contact.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#06</span>
+                        <span class="opacity-60 group-hover:opacity-100">CONTACT</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hanging Greenery Framing -->
+    <div class="fixed top-0 left-0 w-full h-64 z-10 hanging-greenery">
+        <svg width="100%" height="100%" viewBox="0 0 1440 300" preserveAspectRatio="none">
+            <path d="M0,0 L1440,0 L1440,80 C1380,120 1300,50 1200,100 C1100,150 1000,80 900,140 C800,180 700,90 600,120 C500,150 400,80 300,110 C200,140 100,60 0,100 Z" fill="#2D3A20"></path>
+            <path d="M1200,0 C1200,0 1250,150 1200,200" stroke="#4A5D33" stroke-width="2" fill="none"></path>
+            <path d="M400,0 C400,0 350,180 400,250" stroke="#4A5D33" stroke-width="2" fill="none"></path>
+            <circle cx="1200" cy="210" r="4" fill="#4A5D33"></circle>
+            <circle cx="400" cy="260" r="4" fill="#4A5D33"></circle>
+        </svg>
+    </div>
+
+    <header class="pt-60 pb-20 text-center px-6">
+        <h1 class="font-heading text-7xl mb-4">The Wide Shot.</h1>
+        <p class="text-sunset uppercase tracking-[0.4em] text-xs font-bold">Captured Moments</p>
+    </header>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" alt="1"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop" alt="2"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop" alt="3"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1559925393-8be0ec41b595?q=80&w=2071&auto=format&fit=crop" alt="4"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1974&auto=format&fit=crop" alt="5"></div>
+                <div class="gallery-card"><img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?q=80&w=2070&auto=format&fit=crop" alt="6"></div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-20 text-center border-t border-cream/5">
+        <p class="text-[10px] opacity-30">&copy; 2025 Hide & Seek Cafe.</p>
+    </footer>
+</body>
+</html>

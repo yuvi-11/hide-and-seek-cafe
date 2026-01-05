@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Seek Cafe | #01 HOME</title>
+    <meta name="description" content="Hide & Seek Cafe in Manjalpur, Vadodara. Cinematic Noir vibes, the art of Kulhad Pizza, and a sanctuary for dreamers.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        charcoal: '#121212',
+                        cream: '#FDFBF7',
+                        sunset: '#FC8019',
+                    },
+                    fontFamily: {
+                        heading: ['Playfair Display', 'serif'],
+                        body: ['Outfit', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        '4xl': '32px',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(252, 128, 25, 0.2)',
+                        'soft-glow': '0 0 40px rgba(0, 0, 0, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- GSAP for Cinematic Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+        body {
+            background-color: #121212;
+            color: #FDFBF7;
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Brick Pattern Overlay */
+        .brick-overlay {
+            background-image: url('https://www.transparenttextures.com/patterns/brick-wall.png');
+            opacity: 0.03;
+            pointer-events: none;
+        }
+
+        /* Glassmorphism */
+        .glass {
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(253, 251, 247, 0.05);
+        }
+
+        .nav-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .nav-link:hover {
+            color: #FC8019;
+        }
+        .nav-link.active .link-dot {
+            background-color: #FC8019;
+            width: 6px;
+            height: 6px;
+        }
+        
+        .fade-in { opacity: 0; transform: translateY(30px); }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #121212; }
+        ::-webkit-scrollbar-thumb { background: #FC8019; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-charcoal text-cream selection:bg-sunset selection:text-white">
+
+    <div class="fixed inset-0 brick-overlay z-[100]"></div>
+
+    <!-- Live Status Badge -->
+    <div class="fixed top-6 right-6 z-[1000] hidden md:block">
+        <div class="flex items-center gap-3 px-4 py-2 glass rounded-full border border-sunset/20 shadow-glow">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+            </span>
+            <span class="text-xs font-bold tracking-widest uppercase text-green-400">Open until 11:30 PM IST</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-[900] glass border-b border-cream/5">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between gap-8">
+                <!-- Group 1 -->
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="index.html" class="nav-link active group flex flex-col items-center">
+                        <span class="text-sunset mb-1">#01</span>
+                        <span>HOME</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="about.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#02</span>
+                        <span class="opacity-60 group-hover:opacity-100">ABOUT</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="menu.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#03</span>
+                        <span class="opacity-60 group-hover:opacity-100">MENU</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                </div>
+
+                <!-- Logo -->
+                <a href="index.html" class="flex flex-col items-center group">
+                    <span class="font-heading text-2xl tracking-tighter transition-transform group-hover:scale-105">HIDE & SEEK</span>
+                    <span class="text-[8px] tracking-[0.4em] text-sunset uppercase -mt-1">Café & Sanctuary</span>
+                </a>
+
+                <!-- Group 2 -->
+                <div class="hidden lg:flex items-center gap-12 text-[11px] font-bold tracking-[0.2em] uppercase">
+                    <a href="gallery.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#04</span>
+                        <span class="opacity-60 group-hover:opacity-100">GALLERY</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="articles.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#05</span>
+                        <span class="opacity-60 group-hover:opacity-100">ARTICLES</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="contact.html" class="nav-link group flex flex-col items-center">
+                        <span class="text-sunset/50 mb-1">#06</span>
+                        <span class="opacity-60 group-hover:opacity-100">CONTACT</span>
+                        <div class="link-dot w-0 h-0 rounded-full mt-1 transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bg-sunset"></div>
+                    </a>
+                    <a href="https://wa.me/919999999999" target="_blank" class="nav-link group flex flex-col items-center text-sunset">
+                        <span class="mb-1">#07</span>
+                        <span>JOIN THE STORY</span>
+                        <div class="link-dot w-1.5 h-1.5 bg-sunset rounded-full mt-1 animate-pulse"></div>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-toggle" class="lg:hidden flex flex-col gap-1.5 p-2">
+                    <span class="w-6 h-0.5 bg-cream"></span>
+                    <span class="w-6 h-0.5 bg-sunset"></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-[1000] glass flex items-center justify-center translate-y-full transition-transform duration-500">
+        <button id="menu-close" class="absolute top-8 right-8 text-sunset text-4xl">&times;</button>
+        <div class="flex flex-col items-center gap-8 text-2xl font-bold tracking-widest uppercase">
+            <a href="index.html" class="text-sunset">#01 HOME</a>
+            <a href="about.html">#02 ABOUT</a>
+            <a href="menu.html">#03 MENU</a>
+            <a href="gallery.html">#04 GALLERY</a>
+            <a href="articles.html">#05 ARTICLES</a>
+            <a href="contact.html">#06 CONTACT</a>
+            <a href="https://wa.me/919999999999" class="text-sunset">JOIN THE STORY</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="h-[100vh] relative flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?q=80&w=2047&auto=format&fit=crop" alt="Cafe Interior" class="w-full h-full object-cover brightness-50 contrast-125 scale-110" id="hero-img">
+            <div class="absolute inset-0 bg-gradient-to-b from-charcoal/80 via-transparent to-charcoal"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-6">
+            <h1 class="font-heading text-6xl md:text-8xl lg:text-9xl mb-8 leading-tight fade-in" id="hero-title">
+                Hide & Seek: Where <br>
+                Every <span class="text-sunset italic">Sip</span> Has a Story.
+            </h1>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 fade-in" style="transition-delay: 200ms;">
+                <a href="#vibe" class="px-10 py-5 bg-sunset text-white font-bold rounded-full shadow-glow hover:scale-105 transition-transform uppercase tracking-widest text-sm">Enter the Vibe</a>
+                <a href="https://www.swiggy.com/restaurants/hide-and-seek-cafe-manjalpur-vadodara-1079891" target="_blank" class="px-10 py-5 glass border border-cream/20 font-bold rounded-full hover:bg-cream hover:text-charcoal transition-all uppercase tracking-widest text-sm">Order via Swiggy</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce opacity-40">
+            <span class="text-[10px] tracking-[0.3em] font-bold uppercase">Discover</span>
+            <div class="w-px h-12 bg-sunset"></div>
+        </div>
+    </section>
+
+    <!-- The Craft -->
+    <section id="craft" class="py-32 relative bg-charcoal section-fade">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-sunset/10 blur-3xl rounded-4xl"></div>
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop" alt="Kulhad Pizza" class="relative rounded-4xl w-full aspect-square object-cover shadow-2xl">
+                    <div class="absolute -bottom-10 -right-10 hidden lg:block">
+                        <div class="glass p-8 rounded-4xl border border-sunset/30 shadow-glow">
+                            <span class="font-heading text-4xl text-sunset italic">Magic in clay.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-4">
+                        <div class="w-12 h-px bg-sunset"></div>
+                        <span class="text-sunset font-bold tracking-[0.3em] uppercase text-xs">The Craft</span>
+                    </div>
+                    <h2 class="font-heading text-5xl md:text-7xl">The Art of <br>the <span class="italic text-sunset">Kulhad</span>.</h2>
+                    <p class="text-xl text-cream/70 leading-relaxed font-light">
+                        Magic in the steam, warmth in the clay. We’ve reinvented the humble Kulhad to bring you memories wrapped in flavor. Our Kulhad Pizza is not just a dish; it’s a narrative of tradition meeting the modern palate.
+                    </p>
+                    <div class="grid grid-cols-2 gap-10 pt-6">
+                        <div class="space-y-2">
+                            <span class="text-3xl font-heading text-sunset">100%</span>
+                            <p class="text-xs uppercase tracking-widest opacity-60 font-bold">Natural Terracotta</p>
+                        </div>
+                        <div class="space-y-2">
+                            <span class="text-3xl font-heading text-sunset">Fresh</span>
+                            <p class="text-xs uppercase tracking-widest opacity-60 font-bold">Hand-baked Daily</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Vibe -->
+    <section id="vibe" class="py-32 relative bg-zinc-900 section-fade overflow-hidden">
+        <!-- Hanging Greenery SVG Positioned at top -->
+        <div class="absolute top-0 left-0 w-full h-40 pointer-events-none opacity-40 z-10">
+            <svg width="100%" height="100%" viewBox="0 0 1440 200" preserveAspectRatio="none">
+                <path d="M0,0 L1440,0 L1440,50 C1400,80 1300,20 1200,60 C1100,100 1000,40 900,120 C800,150 700,80 600,100 C500,120 400,60 300,90 C200,120 100,50 0,80 Z" fill="#2D3A20"></path>
+                <circle cx="50" cy="80" r="5" fill="#4A5D33"></circle>
+                <circle cx="200" cy="110" r="8" fill="#4A5D33"></circle>
+                <circle cx="450" cy="90" r="4" fill="#4A5D33"></circle>
+                <circle cx="800" cy="130" r="6" fill="#4A5D33"></circle>
+                <circle cx="1100" cy="70" r="5" fill="#4A5D33"></circle>
+            </svg>
+        </div>
+
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-20">
+                <div class="w-full lg:w-1/2 relative">
+                    <div class="absolute -inset-4 bg-sunset/5 blur-3xl rounded-4xl"></div>
+                    <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=2070&auto=format&fit=crop" alt="Cafe Vibe" class="relative rounded-4xl w-full aspect-[4/3] object-cover shadow-2xl">
+                </div>
+                <div class="w-full lg:w-1/2 space-y-8">
+                    <div class="inline-flex items-center gap-4">
+                        <div class="w-12 h-px bg-sunset"></div>
+                        <span class="text-sunset font-bold tracking-[0.3em] uppercase text-xs">The Vibe</span>
+                    </div>
+                    <h2 class="font-heading text-5xl md:text-7xl">A Sanctuary <br>in the <span class="italic text-sunset">City</span>.</h2>
+                    <p class="text-xl text-cream/70 leading-relaxed font-light">
+                        Good music is our heartbeat. Step out of the chaos of Vadodara and into a space designed for conversations, ideas, and quiet reflection. Here, time slows down.
+                    </p>
+                    <div class="flex flex-col gap-6 pt-6">
+                        <div class="flex items-center gap-6 glass p-6 rounded-4xl border border-cream/5 shadow-soft-glow">
+                            <div class="w-12 h-12 flex items-center justify-center bg-sunset/20 rounded-full text-sunset">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+                            </div>
+                            <div>
+                                <h4 class="font-bold uppercase tracking-widest text-sm mb-1">Curated Soul</h4>
+                                <p class="text-sm text-cream/50">Jazzy tunes and lo-fi beats for the perfect mood.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-charcoal pt-32 pb-20 border-t border-cream/5">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-20 mb-32">
+                <div class="lg:col-span-5 space-y-12">
+                    <a href="#" class="flex flex-col items-start group">
+                        <span class="font-heading text-4xl tracking-tighter">HIDE & SEEK</span>
+                        <span class="text-xs tracking-[0.4em] text-sunset uppercase -mt-1">Café & Sanctuary</span>
+                    </a>
+                    <p class="text-2xl font-light italic text-cream/60 leading-relaxed">
+                        "Every coffee we serve is a chapter, and every guest is a character in our ongoing story."
+                    </p>
+                    <div class="flex items-center gap-6">
+                        <a href="https://www.instagram.com/hide_and_seek_vadodara" target="_blank" class="w-12 h-12 flex items-center justify-center glass border border-cream/10 rounded-full hover:bg-sunset hover:border-sunset transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                        </a>
+                        <a href="https://www.swiggy.com/restaurants/hide-and-seek-cafe-manjalpur-vadodara-1079891" target="_blank" class="w-12 h-12 flex items-center justify-center glass border border-cream/10 rounded-full hover:bg-sunset hover:border-sunset transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 flex flex-col justify-end items-start lg:items-end text-left lg:text-right space-y-10">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold tracking-[0.4em] uppercase text-sunset/60">Location</span>
+                        <h3 class="text-2xl font-heading leading-tight">
+                            GF 22, Lileriya Paramount, <br>
+                            Manjalpur, Vadodara.
+                        </h3>
+                        <a href="https://maps.app.goo.gl/P2LzY8vXzXzXzXzX9" target="_blank" class="inline-flex items-center gap-2 text-sunset font-bold uppercase tracking-widest text-xs border-b border-sunset/30 pb-1 hover:border-sunset transition-all">
+                            Find us on Maps
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                    </div>
+                    <div class="pt-10">
+                        <a href="https://wa.me/919999999999" class="group relative px-12 py-6 bg-sunset text-white font-bold rounded-full overflow-hidden transition-all">
+                            <span class="relative z-10 uppercase tracking-widest">Join the Story</span>
+                            <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-20 border-t border-cream/5 flex flex-col md:row justify-between items-center gap-10 text-[10px] font-bold tracking-[0.2em] text-cream/30 uppercase">
+                <p>&copy; 2025 Hide & Seek Cafe. Crafted with Soul.</p>
+                <div class="flex items-center gap-12">
+                    <a href="#" class="hover:text-sunset transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-sunset transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP Animations -->
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Parallax
+        gsap.to("#hero-img", {
+            yPercent: 20,
+            ease: "none",
+            scrollTrigger: {
+                trigger: "section",
+                start: "top top",
+                end: "bottom top",
+                scrub: true
+            }
+        });
+
+        // Fade in Up
+        const faders = document.querySelectorAll('.section-fade');
+        faders.forEach(section => {
+            gsap.from(section.querySelectorAll('h2, p, img, a, div'), {
+                opacity: 0,
+                y: 50,
+                duration: 1.2,
+                stagger: 0.2,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: section,
+                    start: "top 70%",
+                }
+            });
+        });
+
+        // Mobile Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.onclick = () => {
+            mobileMenu.classList.remove('translate-y-full');
+        };
+        menuClose.onclick = () => {
+            mobileMenu.classList.add('translate-y-full');
+        };
+
+        // Hero Entrance
+        gsap.from("#hero-title", {
+            opacity: 0,
+            y: 100,
+            duration: 1.5,
+            ease: "expo.out",
+            delay: 0.5
+        });
+        gsap.from(".fade-in", {
+            opacity: 0,
+            y: 30,
+            duration: 1.2,
+            stagger: 0.3,
+            ease: "power3.out",
+            delay: 0.8
+        });
+    </script>
+</body>
+</html>

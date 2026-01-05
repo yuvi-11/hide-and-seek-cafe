@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hide & Seek Cafe | Your Late Night Escape</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        espresso: '#1E1B18',
+                        cream: '#FDFBF7',
+                        accent: '#D4AF37', // Gold accent
+                    },
+                    fontFamily: {
+                        lexend: ['Lexend', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1E1B18;
+            color: #FDFBF7;
+            font-family: 'Lexend', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll glitch */
+            scroll-behavior: smooth;
+        }
+        .bento-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+            will-change: transform; /* Hardware acceleration */
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .bento-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-4px);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .blurred-blob {
+            will-change: transform, filter;
+            transform: translateZ(0); /* Force GPU layer */
+            pointer-events: none; /* Ensure no interaction interference */
+        }
+        .glass {
+            background: rgba(30, 27, 24, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8 max-w-7xl mx-auto">
+    <!-- Header/Navigation -->
+    <nav class="flex justify-between items-center mb-12 py-4">
+        <h1 class="text-2xl md:text-3xl font-bold tracking-tighter uppercase">Hide <span class="text-accent">&</span> Seek</h1>
+        
+        <!-- Toggle Switch -->
+        <div class="flex items-center bg-white/5 p-1 rounded-full border border-white/10">
+            <button id="whatsapp-toggle" class="px-4 py-2 rounded-full text-sm font-medium transition-all bg-cream text-espresso">WhatsApp</button>
+            <button id="swiggy-toggle" class="px-4 py-2 rounded-full text-sm font-medium transition-all text-cream/60 hover:text-cream">Swiggy</button>
+        </div>
+    </nav>
+
+    <!-- Main Bento Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:auto-rows-[180px]">
+        
+        <!-- Hero Section -->
+        <div class="md:col-span-3 md:row-span-2 bento-card relative flex items-center p-8 md:p-12">
+            <div class="z-10 max-w-xl">
+                <span class="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Manjalpur, Vadodara</span>
+                <h2 class="text-5xl md:text-7xl font-bold leading-tight mb-6">Your Late <br/>Night Escape.</h2>
+                <p class="text-cream/60 text-lg mb-8 max-w-sm">Experience the perfect blend of cozy vibes and gourmet treats under the stars.</p>
+                <div class="flex gap-4">
+                    <button class="bg-cream text-espresso px-8 py-4 rounded-full font-bold hover:bg-accent hover:text-white transition-colors">Visit Now</button>
+                    <button id="main-order-btn" class="border border-white/20 bg-white/5 px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-colors">Order Online</button>
+                </div>
+            </div>
+            <!-- Decorative Circle -->
+            <div class="absolute -right-20 -top-20 w-80 h-80 bg-accent/20 rounded-full blur-[100px] blurred-blob"></div>
+            <div class="absolute -bottom-20 left-1/2 w-64 h-64 bg-cream/5 rounded-full blur-[80px] blurred-blob"></div>
+        </div>
+
+        <!-- Kulhad Pizza -->
+        <div class="md:col-span-1 md:row-span-2 bento-card group">
+            <img src="kulhad_pizza_premium_1766858408558.png" alt="Kulhad Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-espresso via-transparent p-6 flex flex-col justify-end">
+                <h3 class="text-xl font-bold">Kulhad Pizza</h3>
+                <p class="text-xs text-cream/70 uppercase tracking-widest mt-1">Signature Dish</p>
+            </div>
+        </div>
+
+        <!-- Ice Teas -->
+        <div class="md:col-span-2 md:row-span-1 bento-card group flex items-center">
+            <div class="w-1/2 h-full overflow-hidden">
+                <img src="ice_tea_assorted_1766858423539.png" alt="Ice Teas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            </div>
+            <div class="w-1/2 p-6">
+                <h3 class="text-xl font-bold mb-2">Refreshing Ice Teas</h3>
+                <p class="text-sm text-cream/60">Blended with fresh herbs and citrus.</p>
+            </div>
+        </div>
+
+        <!-- Location Card -->
+        <div class="md:col-span-2 md:row-span-1 bento-card p-6 flex flex-col justify-between bg-accent/10 border-accent/20">
+            <div>
+                <div class="flex items-center gap-2 mb-2">
+                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                    <span class="text-accent text-xs font-bold uppercase tracking-widest">Find Us</span>
+                </div>
+                <h3 class="text-xl font-bold">GF 22, Lileriya Paramount</h3>
+                <p class="text-sm text-cream/60 mt-1">Manjalpur, Vadodara, Gujarat</p>
+            </div>
+            <a href="https://maps.google.com" target="_blank" class="w-full bg-espresso text-cream text-center py-3 rounded-xl text-sm font-bold border border-white/10 hover:border-accent transition-colors">
+                Get Directions
+            </a>
+        </div>
+
+        <!-- Panini -->
+        <div class="md:col-span-1 md:row-span-2 bento-card group">
+            <img src="panini_gourmet_1766858441398.png" alt="Panini" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+            <div class="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent p-6 flex flex-col justify-end">
+                <h3 class="text-xl font-bold">Gourmet Panini</h3>
+                <p class="text-xs text-cream/70 uppercase tracking-widest mt-1">Grilled Perfection</p>
+            </div>
+        </div>
+
+        <!-- Social/Status Card -->
+        <div class="md:col-span-1 md:row-span-1 bento-card p-6 flex flex-col justify-center items-center text-center">
+            <span class="text-3xl mb-2">🌙</span>
+            <h3 class="font-bold">Open Late</h3>
+            <p class="text-xs text-cream/50 mt-1">Till 2:00 AM</p>
+        </div>
+
+        <!-- Instagram/Connect Card -->
+        <div class="md:col-span-2 md:row-span-1 bento-card p-6 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <div class="w-12 h-12 bg-white/5 rounded-2xl flex items-center justify-center text-2xl">📸</div>
+                <div>
+                    <h3 class="font-bold">Follow Our Journey</h3>
+                    <p class="text-xs text-cream/50">@hideandseek.cafe</p>
+                </div>
+            </div>
+            <button class="bg-white/5 hover:bg-white/10 p-4 rounded-2xl transition-all">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+        </div>
+
+    </div>
+
+    <footer class="mt-20 py-8 border-t border-white/5 text-center">
+        <p class="text-cream/30 text-sm">© 2025 Hide & Seek Cafe. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const waBtn = document.getElementById('whatsapp-toggle');
+        const swiggyBtn = document.getElementById('swiggy-toggle');
+        const mainOrderBtn = document.getElementById('main-order-btn');
+        let currentMode = 'whatsapp';
+
+        function updateToggle() {
+            if (currentMode === 'whatsapp') {
+                waBtn.classList.add('bg-cream', 'text-espresso');
+                waBtn.classList.remove('text-cream/60');
+                swiggyBtn.classList.remove('bg-cream', 'text-espresso');
+                swiggyBtn.classList.add('text-cream/60');
+                mainOrderBtn.innerText = 'Order via WhatsApp';
+            } else {
+                swiggyBtn.classList.add('bg-cream', 'text-espresso');
+                swiggyBtn.classList.remove('text-cream/60');
+                waBtn.classList.remove('bg-cream', 'text-espresso');
+                waBtn.classList.add('text-cream/60');
+                mainOrderBtn.innerText = 'Order via Swiggy';
+            }
+        }
+
+        waBtn.addEventListener('click', () => {
+            currentMode = 'whatsapp';
+            updateToggle();
+        });
+
+        swiggyBtn.addEventListener('click', () => {
+            currentMode = 'swiggy';
+            updateToggle();
+        });
+
+        mainOrderBtn.addEventListener('click', () => {
+            if (currentMode === 'whatsapp') {
+                window.open('https://wa.me/91XXXXXXXXXX', '_blank');
+            } else {
+                window.open('https://www.swiggy.com', '_blank');
+            }
+        });
+    </script>
+</body>
+</html>
